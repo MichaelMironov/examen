@@ -15,6 +15,9 @@ public class TasksPage extends WebPage {
     @Name("статус задачи")
     private final SelenideElement taskStatus = $x("//span[contains(@class, 'jira-issue-status')]");
 
+    @Name("версия исправления")
+    private final SelenideElement fixVersion = $x("//*[@id='fixVersions-field']/a");
+
     @Name("количество задач")
     private final SelenideElement tasksCount = $x("//span[contains(@class, 'results-count-total')]");
 }
