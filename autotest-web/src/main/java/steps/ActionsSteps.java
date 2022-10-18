@@ -12,6 +12,7 @@ import ru.ifellow.web.page.PageBuilder;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.switchTo;
+import static io.qameta.allure.Allure.step;
 
 public class ActionsSteps {
 
@@ -51,6 +52,7 @@ public class ActionsSteps {
     @Тогда("извлечь данные элемента {string}")
     public void extractValue(String elementName){
       String value = pageBuilder.getCurrentPage().getElement(elementName).shouldBe(visible,appear).getText();
+      step("Количество задач проекта: " + value);
       LOGGER.info("Значение эелемента {} = {}",elementName, value);
     }
 
