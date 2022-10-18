@@ -45,8 +45,7 @@ public class WebHooks {
             fos.close();
 
         } catch (Exception e) {
-            System.err.println("Ошибка записи в файл");
-            e.printStackTrace();
+            System.err.println("Создание файла");
         }
     }
 
