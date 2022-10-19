@@ -65,7 +65,7 @@
       | jerry_species  | $.species  |
       | jerry_location | $.location |
     И сравнить значения
-      | $.{jerry_id}     | != | null        |
+      | ${jerry_id}      | != | null        |
       | ${jerry_name}    | == | Young Jerry |
       | ${jerry_species} | == | Human       |
 
